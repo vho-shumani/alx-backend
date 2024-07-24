@@ -11,7 +11,7 @@ class FIFOCache(BaseCaching):
     def __init__(self):
         """Initializes variables"""
         super().__init__()
-    
+
     def put(self, key, item):
         """Add a new item in the cache
         """
@@ -22,7 +22,7 @@ class FIFOCache(BaseCaching):
                     self.cache_data.pop(discard_key)
                     print(f"DISCARD: {discard_key}")
             self.cache_data[key] = item
-        
+
     def get(self, key):
         """ Retrieves item from cache
         """
