@@ -5,7 +5,10 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """Class adds and retrieves data from dictionary
+    """
     def __init__(self):
+        """intializes variables"""
         super().__init__()
 
     def put(self, key, item):
