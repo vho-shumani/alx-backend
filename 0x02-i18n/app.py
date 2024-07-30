@@ -14,6 +14,7 @@ users = {
 }
 
 class Config:
+    """Define config parameter"""
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -21,6 +22,7 @@ class Config:
 app.config.from_object(Config)
 
 def get_user():
+    """"""
     login_as = request.args.get('login_as')
     if login_as:
         return users.get(int(login_as))
